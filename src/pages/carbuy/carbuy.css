@@ -1,0 +1,51 @@
+.single-car-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+  
+.car-details {
+   display: flex;
+   gap: 30px;
+   background: white;
+   border-radius: 10px;
+   padding: 20px;
+}
+  
+.car-details img {
+  width: 400px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.car-info {
+  flex: 1;
+}
+
+.comments-section {
+  margin-top: 30px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+  
+  .add-comment {
+    margin-top: 10px;
+  }
+  
+  .add-comment textarea {
+    width: 100%;
+    height: 100px;
+    resize: none;
+    padding: 10px;
+  }
+  
+  .add-comment button {
+    margin-top: 10px;
+    background: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  

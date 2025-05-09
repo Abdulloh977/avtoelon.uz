@@ -1,0 +1,31 @@
+.footer {
+    background-color: #2196f3; /* Blue background */
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+  }
+  
+  .footer-nav {
+    margin-bottom: 10px;
+  }
+  
+  .footer-nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s, border-bottom 0.3s;
+  }
+  
+  .footer-nav a:hover {
+    color: #ffd700; /* Gold color on hover */
+    border-bottom: 2px solid #ffd700;
+    padding-bottom: 2px;
+  }
+  
+  .footer-copy {
+    font-size: 14px;
+    margin-top: 10px;
+    opacity: 0.8;
+  }
+  

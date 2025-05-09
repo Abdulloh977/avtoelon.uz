@@ -1,0 +1,40 @@
+.header {
+    background-color: rgb(72, 72, 255);
+
+}
+.header_container {
+    background-color: rgb(72, 72, 255);
+    padding: 40px 40px 0px;
+    color: white;
+    display: flex;
+    align-items: start;
+    justify-content: space-around;
+}
+.header_Link {
+    color: white;
+    font-size: 35px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.header_wrraper {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.header_link {
+    color: white;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    font-weight: 400;
+    padding-bottom: 20px;
+    border-bottom: 3px solid transparent;
+}
+
+.header_link:hover {
+    cursor: grabbing;
+    border-bottom: 4px solid white;
+}
