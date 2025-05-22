@@ -2,7 +2,7 @@ import { Link, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { Header } from "../../companets/heaader/header";
 import { Footer } from "../../companets/footer/footer";
-import "./CategoryList.css"; 
+import "./categoryList.css"; 
 
 const CategoryList = () => {
   const { id } = useParams();
@@ -56,7 +56,7 @@ const CategoryList = () => {
                 <p>{car.year}</p>
                 <p>{car.location}</p>
                 <div className="author-info">
-                  <img className="author-avatar" src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="author" />
+                  <img className="author-avatar" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLFeF4nKft1sf4uulK3n0K5flDIRmUMKJ7Kw&s" alt="author"  width={30} height={30}/>
                   <div className="akkount">
                     <p>Author Name</p>
                     <p>author@gmail.com</p>

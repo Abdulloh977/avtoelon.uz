@@ -20,29 +20,19 @@ const Logen = () => {
 
   return (
     <div className="container">
-      <div className='logen-home'>
+      <div className="login-container">
         <img src={Img} width={50} height={50} alt="Logo" />
-        <div>
-          <h1 className="logen-h1">AVTOELON</h1>
-          <p className="logen-p">Explore with WEBSTAR IT ACADEMY</p>
+        <div className="login-text">
+          <h1 className="login-title">AVTOELON</h1>
+          <p className="login-subtitle">Explore with WEBSTAR IT ACADEMY</p>
         </div>
-        <form onSubmit={onSubmit} className="logen-div">
-          <h1 className="login">Login</h1>
-          <input
-            name="email"
-            className='input'
-            type="text"
-            placeholder='Enter your email'
-          />
-          <input
-            name="password"
-            className='input'
-            type="password"
-            placeholder='Enter your password'
-          />
-          <div className="logen-div-div">
-            <Link className="logen-link" to="/signup">Don't have an account? Signup</Link>
-            <button className='button' type="submit">Login</button>
+        <form onSubmit={onSubmit} className="login-form">
+          <h1 className="login-header">Login</h1>
+          <input name="email" className="login-input" type="text" placeholder="Enter your email" />
+          <input name="password" className="login-input" type="password" placeholder="Enter your password" />
+          <div className="login-form-footer">
+            <Link className="login-link" to="/signup">Don't have an account? Signup</Link>
+            <button className="login-button" onClick={onSubmit} type="submit">Login</button>
           </div>
         </form>
       </div>

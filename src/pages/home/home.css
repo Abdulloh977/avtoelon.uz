@@ -99,6 +99,7 @@
   padding-top: 0px;
   margin-bottom: 40px;
   padding-bottom: 30px;
+  padding-top: 30px;
 }
 
 .input {
@@ -144,6 +145,7 @@
 
 .brand-name {
   font-size: 18px;
+  text-decoration: none !important;
   font-weight: 600;
   color: #222;
   text-transform: lowercase;

@@ -1,73 +1,116 @@
 import { useParams } from "react-router-dom";
-import { useEffect, useState } from "react";
-import axios from "axios";
+import { useCarContext } from "../../context/carContaxt";
 import { Header } from "../../companets/heaader/header";
 import { Footer } from "../../companets/footer/footer";
-
+import { useState } from "react";
+import "./carbuy.css";
 
 const SingleCar = () => {
-  const { id } = useParams(); 
-  const [car, setCar] = useState(null);
+  const { id } = useParams();
+  const { cars, loading } = useCarContext();
+  const [newComment, setNewComment] = useState(""); 
+  const [localComments, setLocalComments] = useState([]); 
 
-  useEffect(() => {
-    const fetchCar = async () => {
-      try {
-        const { data } = await axios.get(`/api/cars/${id}`);
-        setCar(data.car);
-      } catch (error) {
-        console.error("Car fetch error:", error);
-      }
+  if (loading) {
+    return (
+      <>
+        <Header />
+        <div className="loading">Loading...</div>
+        <Footer />
+      </>
+    );
+  }
+
+  const car = cars.find((car) => car._id.toString() === id.toString());
+
+  if (!car) {
+    return (
+      <>
+        <Header />
+        <div className="loading">Car not found.</div>
+        <Footer />
+      </>
+    );
+  }
+
+  const handleCommentSubmit = () => {
+    if (newComment.trim() === "") return; 
+
+    const commentObject = {
+      _id: Date.now(), 
+      content: newComment,
+      createdAt: new Date(),
     };
 
-    fetchCar();
-  }, [id]);
-
-  
+    setLocalComments([...localComments, commentObject]);
+    setNewComment(""); 
+  };
 
   return (
     <>
-    <Header />
-    <div className="car-details">
-      {/* Car Image */}
-      {car?.image?.url ? (
-          <img src={car.image.url} alt={car.title} style={{ width: "100%", maxWidth: "600px" }} />
-        ) : (
-            <p>No image available</p>
-        )}
+      <Header />
+      <div className="singlecar-container">
+        <div className="singlecar-card">
+          <div className="singlecar-content">
+            <img
+              src={car.image?.url}
+              alt={car.title}
+              className="singlecar-image"
+            />
+            <div className="singlecar-info">
+              <h1 className="heading_title">{car.title}</h1>
+              <p className="pragrf_year">{car.year} • ${car.price} • {car.location || "Location unknown"}</p>
+              <p className="decrepshin">{car.description || "No description available"}</p>
 
-      {/* Car Info */}
-      <div className="car-info">
-        <h1>{car?.title}</h1>
-        <p>
-          {car.year} &nbsp; 
-          ${car.price} &nbsp;
-          {car.location || "Location unknown"}
-        </p>
-        <p>{car.description || "No description available"}</p>
-
-        {/* Author Info */}
-        <div className="author-info">
-          <h4>Author: {car.author?.firstname} {car.author?.lastname}</h4>
-          <p>Email: {car.author?.email}</p>
+              <div className="singlecar-author">
+                <img
+                  src="https://cdn-icons-png.flaticon.com/512/847/847969.png"
+                  alt="author"
+                  className="author-image"
+                />
+                <div>
+                  <h4>{car.author?.firstname} {car.author?.lastname}</h4>
+                  <p>{car.author?.email}</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
 
-      {/* Comments */}
-      <div className="comments">
-        <h2>Comments</h2>
-        {car.comments && car.comments.length > 0 ? (
+        
+        <div className="singlecar-card">
+          <h2>Comments</h2>
+          {car.comments && car.comments.length > 0 ? (
             car.comments.map((comment) => (
-                <div key={comment._id} style={{ marginBottom: "10px" }}>
-              <p>{comment.content || "No comment text"}</p>
+              <div key={comment._id} style={{ marginBottom: "10px" }}>
+                <p>{comment.content || "No comment text"}</p>
+                <small>{new Date(comment.createdAt).toLocaleString()}</small>
+              </div>
+            ))
+          ) : (
+            <p>No comments yet.</p>
+          )}
+
+          
+          {localComments.map((comment) => (
+            <div key={comment._id} style={{ marginBottom: "10px" }}>
+              <p className="text_one">{comment.content}</p>
               <small>{new Date(comment.createdAt).toLocaleString()}</small>
             </div>
-          ))
-        ) : (
-            <p>No comments yet.</p>
-        )}
+          ))}
+
+          <form className="comment-form" onClick={handleCommentSubmit}>
+            <textarea
+              className="text_sumbit"
+              placeholder="Add a comment..."
+              value={newComment}
+              onChange={(e) => setNewComment(e.target.value)}
+            />
+            <button className="btn_submit" onClick={handleCommentSubmit}>Submit Comment</button>
+          </form>
+        </div>
       </div>
-    </div>
-    <Footer />
+      <Footer />
     </>
   );
 };

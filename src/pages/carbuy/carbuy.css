@@ -1,51 +1,115 @@
-.single-car-container {
-    max-width: 1200px;
-    margin: auto;
-    padding: 20px;
-}
-  
-.car-details {
-   display: flex;
-   gap: 30px;
-   background: white;
-   border-radius: 10px;
-   padding: 20px;
-}
-  
-.car-details img {
-  width: 400px;
-  height: auto;
-  border-radius: 10px;
+.singlecar-container {
+  max-width: 1100px;
+  margin: 30px auto;
+  padding: 0 20px;
 }
 
-.car-info {
+.author-image {
+  width: 50px;
+  height: 50px;
+}
+
+.singlecar-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.singlecar-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.singlecar-image {
+  width: 40%;
+  height: 300px;
+  max-width: 500px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.singlecar-info {
   flex: 1;
 }
 
-.comments-section {
-  margin-top: 30px;
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
+.singlecar-info h1 {  
+  font-size: 48px;
+  margin-bottom: 10px;
 }
-  
-  .add-comment {
-    margin-top: 10px;
-  }
-  
-  .add-comment textarea {
-    width: 100%;
-    height: 100px;
-    resize: none;
-    padding: 10px;
-  }
-  
-  .add-comment button {
-    margin-top: 10px;
-    background: #007bff;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-  }
-  
+
+.singlecar-author {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.top-pragrf {
+  padding-bottom: 30px;
+  padding-top: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+}
+
+.top-pragrf2 {
+  padding-bottom: 90px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+}
+
+.comenetHeading {
+  font-size: 40px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.text_sumbit {
+  width: 100%;
+  height: 50px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.btn_submit {
+  width: 20%;
+  height: 40px;
+  border: 0;
+  background-color: rgb(30, 150, 255);
+}
+
+.text_one {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 17px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+}
+
+.comment-form {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+.heading_title {
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  padding-bottom: 20px;
+}
+
+.pragrf_year {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  padding-bottom: 20px;
+}
+
+.decrepshin {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  padding-bottom: 90px;
+}

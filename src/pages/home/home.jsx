@@ -4,6 +4,7 @@ import { Header } from "../../companets/heaader/header"
 import './home.css';
 import { useCategoryContext } from "../../context/cotegoryContaxt";
 import { Link } from "react-router-dom";
+import RecentCars from "../RecentCars/RecentCars";
 const slides = [
   {
     image: "https://китайские-автомобили.рф/wp-content/uploads/2025/02/new_byd_yuan_plus_2.jpg",
@@ -96,6 +97,7 @@ const Home = () => {
             ))}
           </div>
         </section>
+        <RecentCars />
         <Footer />
       </>
     )

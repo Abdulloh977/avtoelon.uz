@@ -20,7 +20,7 @@ export const CategoryProvider = ({ children }) => {
     fetch("https://avtoelon.onrender.com/category", requestOptions)
       .then((response) => response.json())
       .then((result) => {
-        console.log('Apikode', result)
+        // console.log('Apikode', result)
         setCategories(result.category);  
         setLoading(false);
       })

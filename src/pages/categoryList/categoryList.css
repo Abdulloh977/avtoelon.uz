@@ -149,7 +149,7 @@
 }
 
 .author-avatar {
-  width: 30px;
-  height: 30px;
+  width: 50px !important;
+  height: 50px !important;
   border-radius: 50%;
 }

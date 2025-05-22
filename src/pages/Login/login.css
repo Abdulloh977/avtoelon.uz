@@ -1,10 +1,10 @@
-.logen-home{
+.login-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-left: 150px;
+    padding-left: 250px;
     padding-top: 100px;
-    gap: 20px;
+    gap: 35px;
 }
 .login-text {
     height: 120px;
@@ -13,29 +13,29 @@
     flex-direction: column;
     justify-content: space-between;
 }
-.logen-h1{
+.login-title {
   font-size: 60px;
   padding-left: 20px;
 }
-.logen-p{
+.login-subtitle {
   font-size: 20px;
   padding-top: 10px;
   padding-left: 20px;
   font-weight: 100;
 }
-.logen-div{
+.login-form {
   width: 350px;
   margin: 0 auto;
   border-radius: 25px;
   padding: 30px;
   padding-top: 20px;
-  background-color: rgb(247, 247, 247);
+  background-color: rgba(194, 221, 240, 0.956);
 }
-.login{
+.login-header {
   font-size: 40px;
   text-align: center;
 }
-.input{
+.login-input {
   padding: 20px;
   font-size: 20px;
   border-radius: 10px;
@@ -43,18 +43,18 @@
   background-color: rgb(221, 221, 221);
   border: 0;
 }
-.logen-div-div{
+.login-form-footer {
   display: flex;
   padding-top: 25px;
+  gap: 15px;
 }
-.logen-link{
+.login-link {
   font-size: 19px;
   width: 200px;
   text-align: start;
   padding-top: 5px;
-
 }
-.button{
+.login-button {
   font-size: 18px;
   color: #fff;
   background-color: rgb(59, 132, 235);
@@ -62,4 +62,3 @@
   border: 0;
   border-radius: 10px;
 }
-

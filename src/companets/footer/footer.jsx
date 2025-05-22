@@ -9,10 +9,10 @@ export const Footer = () => {
             <nav className="footer-nav">
                <Link to="/">Home</Link>
                <Link to="/about">About Us</Link>
-               <Link to="/settings">Settings</Link>
+               <Link to="/setting">Settings</Link>
                <Link to="/contact">Contact</Link>
             </nav>
-                <p className="footer-copy">© 2025 Asadullokh. All Rights Reserved.</p>
+                <p className="footer-copy">© 2025 Abdulloh. All Rights Reserved.</p>
             </div>
         </footer>
         </>

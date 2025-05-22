@@ -7,6 +7,9 @@ import { useLoginContext } from './context/loginContaxt'
 import { About } from './pages/About/about'
 import CategoryList from './pages/categoryList/categoryList'
 import SingleCar from './pages/carbuy/carbuy'
+import Setting from './pages/setting/setting';
+import { Contact } from './pages/Contact/contaxt'
+import Add from './pages/Newcar/newcar'
 
 
 function App() {
@@ -18,6 +21,9 @@ function App() {
       <Route path='/login' element={<Logen/>} />
       <Route path='/signup' element={<Signup />}/>
       <Route path='/about' element={<About />}/>
+      <Route path='/setting' element={<Setting />} />
+      <Route path='/contact' element={<Contact />} />
+      <Route path='/Add' element={<Add />} />
       <Route path='/category/:id' element={<CategoryList />} />
       <Route path="/car/:id" element={<SingleCar />} />
     </Routes>
